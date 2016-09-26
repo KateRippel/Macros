@@ -3,7 +3,7 @@ const projectPath = "/"+projectName
 
 const webpack = require('webpack');
 const path = require('path');
-const buildPath = path.resolve("C:\\kate\\htdocs\\");
+const buildPath = path.resolve("..\\htdocs\\");
 const nodeModulesPath = path.resolve(__dirname, 'node_modules');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
 const BeepPlugin = require('webpack-beep-plugin');
@@ -58,7 +58,7 @@ const config = {
         loader: 'babel-loader', //react-hot is like browser sync and babel loads jsx and es6-7
         exclude: [nodeModulesPath],
         query: {
-          presets: [ 'react']
+          presets: [ 'react','es2015'],
         }
       },
     ],
